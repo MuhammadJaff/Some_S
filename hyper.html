@@ -12,32 +12,34 @@
     <title>Portfolio</title>
 </head>
 <body class="main_content">
-    <header class="section sec1 active">
+    <header class="section sec1 active" id="home">
          <i class="fab fa-instagram"></i>
     </header>
     <main>
-        <section class="section sec2"></section>
-        <section class="section sec3"></section>
-        <section class="section sec4"></section>
-        <section class="section sec5"></section>
+        <section class="section sec2" id="about"></section>
+        <section class="section sec3" id="portfolio"></section>
+        <section class="section sec4" id="blogs"></section>
+        <section class="section sec5" id="contact"></section>
     </main>
     <div class="controls">
-        <div class="control control_1 btn_active">
+        <div class="control control_1 btn_active" data-id="home">
             <i class="fas fa-home"></i>
         </div>
-        <div class="control control_2">
+        <div class="control control_2" data-id="about">
             <i class="fas fa-user"></i>
         </div>
-        <div class="control control_3">
+        <div class="control control_3" data-id="portfolio">
             <i class="fas fa-briefcase"></i>
         </div>
-        <div class="control control_4">
+        <div class="control control_4" data-id="blogs">
             <i class="fas fa-newspaper"></i>
         </div>
-        <div class="control control_5">
+        <div class="control control_5" data-id="contact">
             <i class="fas fa-envelope-open"></i>
         </div>
     </div>
+
+
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
