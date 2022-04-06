@@ -43,17 +43,27 @@ section{
     transform: translateY(-100%) scale(0);
     transition: var(--trans);
     background-color: var(--color-primary);
-    display: none;
+}
+.active{
+    display: block !important;
 }
 .sec1,.sec2,.sec3,.sec4,.sec5{
     transform: translateY(0) scale(1);
+    display: none;
 }
+.sec2{background-color: #55659d;}
+.sec3{background-color: #1542e6;}
+.sec4{background-color: #b1bbde;}
+.sec5{background-color: #0f1631;}
+
 
 // Controls
 .controls{
     position: fixed;
     top: 50%;
     right: 3vh;
+    display: flex;
+    flex-direction: column;
     transform: translateY(-50%);
     .btn_active{
         background-color: var(--color-secondary) !important;

@@ -1,6 +1,6 @@
 const main = document.querySelector(".main_content");
 const section = document.querySelectorAll(".section");
-const controls = document.querySelector(".controls");
+const controls = document.querySelectorAll(".controls");
 const control = document.querySelectorAll(".control");
     
 function PageTrans(){
@@ -11,6 +11,23 @@ function PageTrans(){
             this.className += ' btn_active';
          })
     }
+
+    main.addEventListener('click',(e)=>{
+        const id = e.target.dataset.id;
+        if(id){
+            controls.forEach(cont=>{
+                cont.classList.remove('active');
+            })
+            e.target.classList.add('active');
+
+            section.forEach(sec=>{
+                sec.classList.remove('active');
+            })
+           
+            const elem = document.getElementById(id);
+            elem.classList.add('active');
+        }
+    })
 }
 
 PageTrans();
