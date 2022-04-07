@@ -20,7 +20,7 @@
   --color-grey-6: #12181b;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
-  --trans: .5s all ease-in-out;
+  --trans: all .5s  ease-in-out;
 }
 
 body {
@@ -42,23 +42,16 @@ section {
   min-height: 100vh;
   width: 100%;
   position: absolute;
-  left: 10;
+  left: 0;
+  top: 0;
   padding: 3rem 8rem;
-}
-
-.section {
-  -webkit-transform: translateY(-100%) scale(0);
-          transform: translateY(-100%) scale(0);
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
-  background-color: var(--color-primary);
 }
 
 .active {
   display: block !important;
 }
 
-.btn_active, .iconka {
+.btn_active {
   -webkit-animation: anime .8s ease-in-out;
           animation: anime .8s ease-in-out;
 }
@@ -157,5 +150,61 @@ section {
 .controls .control i {
   font-size: 1.25rem;
   color: var(--color-grey-2);
+}
+
+.header_content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.header_content .left_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_content .left_header .back_shape {
+  position: absolute;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--color-secondary);
+  width: 65%;
+  height: 100vh;
+  -webkit-clip-path: polygon(0 0, 69% 0, 89% 100%, 0% 100%);
+          clip-path: polygon(0 0, 69% 0, 89% 100%, 0% 100%);
+}
+
+.header_content .left_header .image {
+  border-radius: var(--br-sm-2);
+  width: 68%;
+  height: 90%;
+  padding-left: 4rem;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+}
+
+.header_content .left_header .image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.header_content .left_header .image img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 /*# sourceMappingURL=style.css.map */
