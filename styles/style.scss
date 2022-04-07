@@ -45,7 +45,18 @@ section{
     background-color: var(--color-primary);
 }
 .active{
-    display: block;
+    display: block !important;
+}
+ .btn_active,.iconka{
+    animation: anime .8s ease-in-out;
+    @keyframes anime{
+        0%{
+            transform: translateY(-100%) scale(0);
+        }
+        100%{
+            transform: translateY(0) scale(1);
+        }
+    }
 }
 .sec1,.sec2,.sec3,.sec4,.sec5{
     transform: translateY(0) scale(1);
@@ -54,7 +65,7 @@ section{
 .sec2{background-color: #55659d;}
 .sec3{background-color: #1542e6;}
 .sec4{background-color: #b1bbde;}
-.sec5{background-color: #0f1631;}
+.sec5{background-color: #179e0e;}
 
 
 // Controls
@@ -63,6 +74,7 @@ section{
     top: 50%;
     right: 3vh;
     display: flex;
+    z-index: 10;
     flex-direction: column;
     transform: translateY(-50%);
     .btn_active{
