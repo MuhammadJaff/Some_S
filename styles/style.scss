@@ -282,3 +282,94 @@ section{
         }
     }
 }
+
+.about_stats{
+    // text-align: center;
+    .progress_bars{
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(2,1fr);
+        .progress_bar{
+            display: flex;
+            flex-direction: column;
+            transition: var(--trans);
+            .progress_title{
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+            .progress_container{
+                display: flex;
+                align-items: center;
+                .progress_text{
+                    color: var(--color-grey-2);
+                    padding-right: 1rem;
+                }
+                .progress_itself{
+                    position: relative;
+                    width: 100%;
+                    height: .44rem;
+                    background-color: var(--color-grey-4);
+                    span{
+                        position: absolute;
+                        width: 90%;
+                        background-color: var(--color-secondary);
+                        height: 100%;
+                    }
+                    .css{width: 85%;}
+                    .js,.boots{width: 75%;}
+                    .react{width: 70%;}
+                }
+            }
+        }
+    }
+}
+.my_skills{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 3rem;
+}
+// Timeline
+.timeline_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    padding-bottom: 3rem;
+    .timeline_item{
+        position: relative;
+        border-left: 1px solid var(--color-grey-5);
+        padding-left: 2rem;
+        .timeline_icon{
+            position: absolute;
+            left: -27px;
+            top: 0;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-secondary);
+            font-size: 1.4rem;
+        }
+        .timeline_duration{
+            background-color: var(--color-grey-5);
+            display: inline-block;
+            padding:.2rem .6rem;
+            border-radius: 15px;
+            font-size: .9rem;
+            font-weight: 700;
+        }
+        h5{
+            padding: .7rem 0;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            span{
+                color: var(--color-grey-2);
+                font-size: 1.2rem;
+            }
+        }
+        p{
+            color: var(--color-grey-2);
+        }
+    }
+}
