@@ -63,7 +63,6 @@ section{
     transform: translateY(0) scale(1);
     display: none;
 }
-.sec2{background-color: #55659d;}
 .sec3{background-color: #1542e6;}
 .sec4{background-color: #b1bbde;}
 .sec5{background-color: #179e0e;}
@@ -199,6 +198,87 @@ section{
                     transform: translateX(0);
                 }
             }
+        }
+    }
+}
+// Main title
+.main_title{
+    text-align: center;
+    h2{
+        position: relative;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        font-weight: 600;
+        span{
+            color: var(--color-secondary);
+        }
+        .bg_text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+            transition: var(--trans);
+            font-weight: 800;
+            font-size: 5rem;
+            transform: translate(-50%,-50%);
+            color: var(--color-grey-5);
+        }
+    }
+}
+// Aboutt
+.about_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 3rem;
+    grid-gap: 3rem;
+    .right_about{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2rem;
+        .right_about_item{
+            border: 1px solid var(--color-grey-5);
+            border-radius: 5px;
+            padding: 1.5rem;
+            transition: var(--trans);
+            box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+            &:hover{
+                transform: translateY(-5px);
+                border: 1px solid var(--color-secondary);
+                box-shadow: 1px 2px 15px rgba(0,0,0,.3);
+            }
+            .about_text{
+                display: flex;
+                flex-direction: column;
+                .large_text{
+                    font-size: 3rem;
+                    font-weight: 800;
+                    color: var(--color-secondary);
+                }
+                .small_text{
+                    padding-left: 3rem;
+                    position: relative;
+                    text-transform: uppercase;
+                    color: var(--color-grey-1);
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 1rem;
+                        width: 2rem;
+                        height: 2px;
+                        background-color: var(--color-grey-5);
+                    }
+                }
+            }
+        }
+    }
+    .left_about{
+        p{
+            line-height: 2rem;
+            padding: 1rem 1.2rem;
+        }
+        h2{
+            text-transform: uppercase;
         }
     }
 }
