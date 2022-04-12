@@ -84,10 +84,6 @@ section {
   display: none;
 }
 
-.sec5 {
-  background-color: #179e0e;
-}
-
 .controls {
   position: fixed;
   top: 50%;
@@ -712,5 +708,38 @@ section {
   color: var(--color-grey-2);
   line-height: 1.8rem;
   margin-bottom: .6rem;
+}
+
+.contact_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 5fr;
+      grid-template-columns: 3fr 5fr;
+  padding-top: 3.5rem;
+}
+
+.contact_container .right_contact .double_input {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 5fr;
+      grid-template-columns: 3fr 5fr;
+  grid-gap: 1rem;
+}
+
+.contact_container .right_contact .input_control {
+  margin: 1.4rem 0;
+}
+
+.contact_container .right_contact .input_control input, .contact_container .right_contact .input_control textarea {
+  border-radius: 30px;
+  background-color: var(--color-grey-5);
+  color: var(--color-white);
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  padding: .8rem 1.2rem;
+  font-size: inherit;
+  resize: none;
 }
 /*# sourceMappingURL=style.css.map */

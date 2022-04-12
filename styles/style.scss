@@ -63,7 +63,6 @@ section{
     transform: translateY(0) scale(1);
     display: none;
 }
-.sec5{background-color: #179e0e;}
 
 // Controls
 .controls{
@@ -510,3 +509,35 @@ section{
         }
     }
 }
+
+// Contact
+.contact_container{
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    padding-top: 3.5rem;
+    // .left_contact{
+
+    // }
+    .right_contact{
+        .double_input{
+            display: grid;
+            grid-template-columns: 3fr 5fr;
+            grid-gap: 1rem;
+        }
+        .input_control{
+            margin: 1.4rem 0;
+            input,textarea{
+                border-radius: 30px;
+                background-color: var(--color-grey-5);
+                color: var(--color-white);
+                width: 100%;
+                border: none;
+                outline: none;
+                font-family: inherit;
+                padding: .8rem 1.2rem;
+                font-size: inherit;
+                resize: none;
+            }
+        }
+    }
+}   
