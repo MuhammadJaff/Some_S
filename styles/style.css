@@ -84,10 +84,6 @@ section {
   display: none;
 }
 
-.sec4 {
-  background-color: #b1bbde;
-}
-
 .sec5 {
   background-color: #179e0e;
 }
@@ -639,5 +635,82 @@ section {
 
 .portfolio_container .portfolio_item .hover_port_item .icons .icon:hover i {
   color: var(--color-primary);
+}
+
+.blogs_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+  grid-gap: 2rem;
+}
+
+.blogs_container .blog_item {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+  background-color: var(--color-grey-5);
+  -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  border-radius: .4rem;
+}
+
+.blogs_container .blog_item:hover {
+  -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.33);
+          box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.33);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+}
+
+.blogs_container .blog_item:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+  -webkit-box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.8);
+  border-bottom-left-radius: .4rem;
+  border-bottom-right-radius: .4rem;
+}
+
+.blogs_container .blog_item img {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  height: auto;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: .4rem;
+  border-top-right-radius: .4rem;
+}
+
+.blogs_container .blog_item .blog_text {
+  margin-top: -5px;
+  padding: 1.1rem;
+  border-top: 0.5rem solid var(--color-secondary);
+}
+
+.blogs_container .blog_item .blog_text h3 {
+  margin-bottom: .7rem;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+}
+
+.blogs_container .blog_item .blog_text h3:hover {
+  color: var(--color-secondary);
+}
+
+.blogs_container .blog_item .blog_text p {
+  color: var(--color-grey-2);
+  line-height: 1.8rem;
+  margin-bottom: .6rem;
 }
 /*# sourceMappingURL=style.css.map */
