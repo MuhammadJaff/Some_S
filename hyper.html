@@ -15,7 +15,7 @@
 </head>
 
 <body class="main_content">
-    <header class="section sec1 " id="home">
+    <header class="section sec1 active" id="home">
         <div class="header_content">
             <div class="left_header">
                 <div class="back_shape"></div>
@@ -27,7 +27,7 @@
                 <h1 class="name">Hello. I am <span> Muhammad Jafar</span>. An influencer</h1>
                 <p>Who am I? This question always makes me ponder. I am a son, brother, friend, initially a student of life, sometimes passed, sometimes failed its exams. </p>
                 <div class="btn_container">
-                    <a href="#" class="download_btn">
+                    <a href="./images/CV.pdf" target="_blank" class="download_btn">
                         <span class="download_text">Download CV</span>
                         <span class="download_icon"><i class="fas fa-download"></i></span>
                     </a>
@@ -47,7 +47,7 @@
                          Graduated Westminster lyceum in 2021, currently I am between jobs.
                     </p>
                     <div class="btn_container">
-                        <a href="#" class="download_btn">
+                        <a href="./images/CV.pdf" target="_blank" class="download_btn">
                             <span class="download_text">Download CV</span>
                             <span class="download_icon"><i class="fas fa-download"></i></span>
                         </a>
@@ -195,10 +195,10 @@
                             <a href="https://github.com/MuhammadJaff/Something_simple"  target="_blank" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a onclick="Liked()" target="_blank" class="icon">
+                            <a target="_blank" class="icon like">
                                 <i class="fas fa-thumbs-up"></i>
                             </a>
-                            <a onclick="DisLiked()" target="_blank" class="icon">
+                            <a onclick="DisLiked()" target="_blank" class="icon dislike">
                                 <i class="fas fa-thumbs-down"></i>
                             </a>
                             <a href="mailto:muhammadjaff04@gmail.com" target="_blank" class="icon">
@@ -220,10 +220,10 @@
                             <a href="https://github.com/MuhammadJaff/Something_simple"  target="_blank" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a onclick="Liked()" target="_blank" class="icon">
+                            <a onclick="Liked()" target="_blank" class="icon like">
                                 <i class="fas fa-thumbs-up"></i>
                             </a>
-                            <a onclick="DisLiked()" target="_blank" class="icon">
+                            <a onclick="DisLiked()" target="_blank" class="icon dislike">
                                 <i class="fas fa-thumbs-down"></i>
                             </a>
                             <a href="mailto:muhammadjaff04@gmail.com" target="_blank" class="icon">
@@ -245,10 +245,10 @@
                             <a href="https://github.com/MuhammadJaff/Something_simple"  target="_blank" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a onclick="Liked()" target="_blank" class="icon">
+                            <a onclick="Liked()" target="_blank" class="icon like">
                                 <i class="fas fa-thumbs-up"></i>
                             </a>
-                            <a onclick="DisLiked()" target="_blank" class="icon">
+                            <a onclick="DisLiked()" target="_blank" class="icon dislike">
                                 <i class="fas fa-thumbs-down"></i>
                             </a>
                             <a href="mailto:muhammadjaff04@gmail.com" target="_blank" class="icon">
@@ -291,7 +291,7 @@
                 </div>
             </div>
         </section>
-        <section class="section sec5 active" id="contact">
+        <section class="section sec5" id="contact">
             <div class="main_title">
                 <h2>my <span >contact</span><span class="bg_text">information</span></h2>
             </div>
@@ -372,7 +372,7 @@
                             <input type="text" required placeholder="Subject">
                         </div>
                         <div class="input_control">
-                            <textarea name="" id="" placeholder="Write here..." cols="15" rows="8"></textarea>
+                            <textarea  placeholder="Write here..." cols="15" rows="8"></textarea>
                         </div>
                         <div class="submit_btn">
                             <div class="btn_container">
@@ -404,7 +404,7 @@
             <i class="fas fa-envelope-open "></i>
         </div>
     </div>
-    <div class="theme_btn" onclick="themeChange()">
+    <div class="theme_btn">
         <i class="fas fa-adjust"></i>
     </div>
 

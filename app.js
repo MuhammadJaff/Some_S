@@ -7,12 +7,17 @@
             document.getElementById(button.dataset.id).classList.add('active'); 
         })
     })
-})();
-    function themeChange(){
-        let some = document.querySelector(".theme_btn");
-        some.addEventListener('click',()=>{
-            let boo = document.body;
-            boo.classList.toggle('light_mode');
+    document.querySelector(".theme_btn").addEventListener('click',()=>{
+        document.body.classList.toggle("light_mode");
+    });
+    [...document.querySelectorAll(".like")].forEach(like => {
+            like.addEventListener('click',()=>{
+                alert("Thank you!")
+            });
+    });
+    [...document.querySelectorAll(".dislike")].forEach(dlike => {
+        dlike.addEventListener('click',()=>{
+            alert("Please send feedback")
         })
-    }
-    
+    });
+})();
