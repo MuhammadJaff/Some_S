@@ -8,3 +8,11 @@
         })
     })
 })();
+    function themeChange(){
+        let some = document.querySelector(".theme_btn");
+        some.addEventListener('click',()=>{
+            let boo = document.body;
+            boo.classList.toggle('light_mode');
+        })
+    }
+    
