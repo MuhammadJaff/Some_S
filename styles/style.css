@@ -43,7 +43,7 @@ body {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   color: var(--color-white);
 }
 
@@ -317,6 +317,7 @@ section {
 }
 
 .about_container {
+  margin: 0 !important;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -850,5 +851,109 @@ section {
 .theme_btn:active {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
+}
+
+@media screen and (max-width: 600px) {
+  .header_content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .header_content .right_header {
+    padding: 2rem !important;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .header_content .right_header .name {
+    font-size: 2.5rem;
+  }
+  .header_content .left_header {
+    padding-bottom: 2rem;
+  }
+  .header_content .left_header .back_shape {
+    display: none;
+  }
+  .header_content .left_header .image {
+    padding: 0 !important;
+    width: 80%;
+    margin: 0 auto !important;
+  }
+  section {
+    padding: 3rem 3rem 6rem;
+  }
+  .about_container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about_container .right_about {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about_container .left_about {
+    padding: 0 !important;
+    margin-top: 1.5rem;
+  }
+  .about_container .left_about h2 {
+    font-size: 1.5rem;
+  }
+  .about_container .left_about p {
+    padding-left: 0;
+  }
+  .about_stats .progress_bars {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .main_title h2 {
+    font-size: 2.5rem;
+  }
+  .main_title h2 .bg_text {
+    font-size: 3.7rem;
+    font-weight: 700;
+  }
+  .timeline_container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .timeline_container .timeline_item {
+    margin: .7rem 0;
+  }
+  .port_text {
+    margin-top: 2.5rem;
+  }
+  .portfolio_container, .blogs_container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .contact_container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .contact_container .left_contact h2 {
+    font-size: 1.4rem;
+  }
+  .theme_btn {
+    width: 45px;
+    height: 45px;
+  }
+  .controls {
+    top: auto;
+    bottom: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-grey-5);
+    padding-bottom: 1rem;
+  }
+  .controls .control {
+    margin-left: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

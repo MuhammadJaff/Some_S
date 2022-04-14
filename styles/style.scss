@@ -37,7 +37,7 @@ body{
     overflow-x: hidden;
 }
 header{
-    height: 100vh;
+    min-height: 100vh;
     color: var(--color-white);
 }
 section{
@@ -230,6 +230,8 @@ section{
 }
 // Aboutt
 .about_container{
+    margin: 0 !important;
+
     display: grid;
     grid-template-columns: repeat(2,1fr);
     padding-top: 3rem;
@@ -339,7 +341,6 @@ section{
         background-color: var(--color-grey-5);
         transform: translateX(-50%);
         width: 40%;
-
     }
 }
 // Timeline
@@ -613,5 +614,113 @@ section{
     color: var(--color-grey-2);
     &:active{
         transform: translateY(-3px);
+    }
+}
+
+// Media 
+@media screen and (max-width:600px){
+    // header 
+    .header_content{
+        grid-template-columns: 1fr;
+        padding-bottom: 6rem;
+        .right_header{
+            padding: 2rem !important;
+            grid-row: 1;
+            .name{
+                font-size: 2.5rem;
+            }
+        }
+        .left_header{
+            padding-bottom: 2rem;
+            // justify-content: center;
+            .back_shape{
+                display: none;
+            }
+            .image{
+                padding: 0 !important;
+                width: 80%;
+                margin: 0 auto !important;
+            }
+        }
+    }
+    section{
+        padding: 3rem 3rem 6rem ;
+    }
+    // about 
+    .about_container{
+        grid-template-columns: 1fr;
+        .right_about{
+            grid-template-columns: 1fr;
+        }
+        .left_about{
+            padding: 0 !important;
+            margin-top: 1.5rem;
+            h2{
+                font-size: 1.5rem;
+            }
+            p{
+                padding-left: 0;
+            }
+        }
+    }
+
+    .about_stats{
+        .progress_bars{
+            grid-template-columns: 1fr;
+
+        }
+    }
+
+    .main_title{
+        h2{
+            font-size: 2.5rem;
+            .bg_text{
+                font-size: 3.7rem;
+                font-weight: 700;
+            }
+        }      
+    }
+    .timeline_container{
+        grid-template-columns: 1fr;
+        .timeline_item{
+            margin: .7rem 0;
+        }
+    }
+    // portfolio & blogs
+    .port_text{
+        margin-top: 2.5rem;
+    }
+    .portfolio_container, .blogs_container{
+        grid-template-columns: 1fr;
+    }
+    // contact 
+    .contact_container{
+        grid-template-columns: 1fr;
+        .left_contact{
+            h2{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+
+
+    .theme_btn{
+        width: 45px;
+        height: 45px;
+    }
+    .controls{
+        top: auto;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: center ;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: var(--color-grey-5);
+        padding-bottom: 1rem;
+        .control{
+            margin-left: 1.5rem;
+        }
     }
 }
