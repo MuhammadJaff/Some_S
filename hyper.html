@@ -363,16 +363,16 @@
                     </div>
                 </div>  
                 <div class="right_contact">
-                    <form action="">
+                    <form action="POST">
                         <div class="input_control double_input">
-                            <input type="text" required placeholder="Your name">
-                            <input type="text" required placeholder="Your email">
+                            <input type="text" class="name_input" required placeholder="Your name">
+                            <input type="email" class="email" required placeholder="Your email">
                         </div>
                         <div class="input_control">
-                            <input type="text" required placeholder="Subject">
+                            <input type="text" class="subject" required placeholder="Subject">
                         </div>
                         <div class="input_control">
-                            <textarea  placeholder="Write here..." cols="15" rows="8"></textarea>
+                            <textarea class="message" placeholder="Write here..." cols="15" rows="8"></textarea>
                         </div>
                         <div class="submit_btn">
                             <div class="btn_container">
@@ -407,7 +407,8 @@
     <div class="theme_btn">
         <i class="fas fa-adjust"></i>
     </div>
-
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script src="app.js"></script>
 </body>
 </html>

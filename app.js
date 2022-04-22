@@ -20,4 +20,22 @@
             alert("Please send feedback")
         })
     });
+    document.querySelector('.submit_btn').addEventListener('click',(e)=>{
+        e.preventDefault();
+        var email = document.querySelector('.email').value;
+        var nameOf = document.querySelector('.name_input').value;
+        var message = document.querySelector('.message').value;
+        var subject = document.querySelector('.subject').value;
+        console.log(email, nameOf, subject, message);
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "muhammadjaff04@gmail.com",
+            Password : "xysycnbnmshocrcx",
+            To : 'muhammadjaff04@gmail.com',
+            From : email,
+            Subject : subject,
+            Body : `Mail: ${email } From: ${nameOf}, Subject: ${subject} message: ${message}`
+        })
+        .then(msg => alert(msg));
+    })
 })();
