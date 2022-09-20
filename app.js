@@ -22,20 +22,26 @@
     });
     document.querySelector('.submit_btn').addEventListener('click',(e)=>{
         e.preventDefault();
-        var email = document.querySelector('.email').value;
-        var nameOf = document.querySelector('.name_input').value;
-        var message = document.querySelector('.message').value;
-        var subject = document.querySelector('.subject').value;
-        console.log(email, nameOf, subject, message);
-        Email.send({
-            Host : "smtp.gmail.com",
-            Username : "muhammadjaff04@gmail.com",
-            Password : "xysycnbnmshocrcx",
-            To : 'muhammadjaff04@gmail.com',
-            From : email,
-            Subject : subject,
-            Body : `Mail: ${email } From: ${nameOf}, Subject: ${subject} message: ${message}`
+        var params ={
+            email:document.querySelector('.email').value,
+            name:document.querySelector('.name').value,
+            message:document.querySelector('.message').value,
+            subject:document.querySelector('.subject').value
+        }
+        console.log(params.email, params.name, params.subject, params.message);
+        emailjs.send("service_ck8xdk7","template_gc8vmoa",params).then((res)=>{
+            alert("Success" + res.status);
         })
-        .then(msg => alert(msg));
+
+    //     Email.send({
+    //         Host : "smtp.gmail.com",
+    //         Username : "muhammadjaff04@gmail.com",
+    //         Password : "xysycnbnmshocrcx",
+    //         To : 'muhammadjaff04@gmail.com',
+    //         From : email,
+    //         Subject : subject,
+    //         Body : `Mail: ${email } From: ${nameOf}, Subject: ${subject} message: ${message}`
+    //     })
+    //     .then(msg => alert(msg));
     })
 })();

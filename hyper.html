@@ -365,7 +365,7 @@
                 <div class="right_contact">
                     <form action="POST">
                         <div class="input_control double_input">
-                            <input type="text" class="name_input" required placeholder="Your name">
+                            <input type="text" class="name" required placeholder="Your name">
                             <input type="email" class="email" required placeholder="Your email">
                         </div>
                         <div class="input_control">
@@ -407,8 +407,16 @@
     <div class="theme_btn">
         <i class="fas fa-adjust"></i>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js">
+    </script> -->
     <script src="app.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("xldzS1hAZGyabIL-c");
+        })();
+    </script>
 </body>
 </html>
